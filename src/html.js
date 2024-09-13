@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function HTML(props) {
   return (
@@ -7,12 +7,13 @@ export default function HTML(props) {
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
+          property="og:image"
+          content="https://ashwinforgeorgia.com/images/preview-2.png"
         />
-        <meta property="og:image" content="https://ashwinforgeorgia.com/images/preview-2.png" />
-        <script>{`!function(f,b,e,v,n,t,s)
+        <script>
+          {`!function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
         if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -23,9 +24,25 @@ export default function HTML(props) {
         fbq('init', '518002613883849');
         fbq('track', 'PageView');`}
         </script>
-        <noscript><img height="1" width="1" style={{display: "none"}}
-        src="https://www.facebook.com/tr?id=518002613883849&ev=PageView&noscript=1"
-        /></noscript>
+        <script
+          src="https://app.votesaveamerica.civicengine.com/embed.js"
+          async
+          defer
+        ></script>
+
+        <link
+          rel="stylesheet"
+          media="screen"
+          href="https://app.votesaveamerica.civicengine.com/embed.css"
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=518002613883849&ev=PageView&noscript=1"
+          />
+        </noscript>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
@@ -38,7 +55,7 @@ export default function HTML(props) {
         {props.postBodyComponents}
       </body>
     </html>
-  )
+  );
 }
 
 HTML.propTypes = {
@@ -48,4 +65,4 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
-}
+};
