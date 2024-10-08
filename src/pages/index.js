@@ -71,6 +71,7 @@ import climatecabinet from '../images/endorsements/climatecabinet.png';
 import redclay from '../images/endorsements/redclay.png';
 import georgiaequality from '../images/endorsements/georgiaequality.png';
 import hrc from '../images/endorsements/hrcpac.png';
+import VotersInfo from '../components/votersinfo';
 
 const Issue = ({ title, img, href, children }) => (
   <li className="usa-card tablet:grid-col-4 issue">
@@ -319,6 +320,7 @@ const IndexPage = () => (
             <Endorsement headshot={butler} title="Georgia Democratic Caucus Leader Sen." name="Gloria Butler" />
             <Endorsement headshot={parent} title="Georgia Democratic Caucus Chair Sen." name="Elena Parent" />
             <Endorsement headshot={park} title="Georgia Democratic Whip Rep." name="Sam Park" />
+            <Endorsement headshot={bourdeaux} title="Fmr. U.S. Representative" name="Carolyn Bourdeaux" />
             <Endorsement headshot={carter} title="Fmr. Sen." name="Jason Carter" />
             <Endorsement headshot={au} title="HD50 Rep." name="Michelle Au" />
             <Endorsement headshot={khanna} title="U.S. Representative" name="Ro Khanna" />
@@ -371,7 +373,9 @@ const IndexPage = () => (
           </div> */}
         </div>
       </div>
-    </section>
+      <hr/>
+     
+    </section> 
     {/* <hr />
     <WhyNot /> */}
   </Layout>
